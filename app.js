@@ -8,6 +8,9 @@ const app = express();
 app.set('view engine','ejs');
 
 //middleware
+app.use(express.json()); //comes before routes
+app.use(authRoutes);
+
 
 const dbURI = 'mongodb+srv://library:elibrary@trial.nacabxh.mongodb.net/E-Library?retryWrites=true&w=majority';
 mongoose.connect(dbURI,{ useNewUrlParser: true, useUnifiedTopology: true })
