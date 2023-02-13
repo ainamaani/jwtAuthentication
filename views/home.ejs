@@ -9,10 +9,20 @@
         body{
             text-align: center;
         }
+        .logout{
+            margin-top: 20px;
+            color: #fff;
+            background: rgb(93, 93, 194);
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+
     <h1>HOME</h1>
-    <h3>LOGIN SUCCESSFUL BRUV!!!!</h3>
+    <h3>Welcome <%= user.email %></h3>
+    <a class="logout" href="/logout">Logout</a>
 </body>
 </html>
